@@ -30,6 +30,82 @@ body {
     padding: 0 20px;
 }
 
+/* Button Styles */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    min-width: 160px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn i {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover i {
+    transform: translateX(-5px);
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: var(--white);
+    box-shadow: 0 4px 15px rgba(0, 51, 102, 0.2);
+}
+
+.btn-primary:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 51, 102, 0.3);
+}
+
+.btn-accent {
+    background: var(--accent-color);
+    color: var(--white);
+    box-shadow: 0 4px 15px rgba(255, 153, 0, 0.3);
+}
+
+.btn-accent:hover {
+    background: #ffaa22;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 153, 0, 0.4);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 10px 25px;
+}
+
+.btn-outline:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
 /* Top Bar */
 .top-bar {
     background: var(--primary-color);
@@ -139,69 +215,9 @@ body {
 .nav-links a.active::after {
     width: 100%;
 }
-
-/* Mobile Menu */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 6px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-}
-
-.menu-toggle span {
-    display: block;
-    width: 25px;
-    height: 2px;
-    background: var(--primary-color);
-    transition: var(--transition);
-}
-
-.mobile-menu {
-    position: fixed;
-    top: 0;
-    right: -300px;
-    width: 300px;
-    height: 100vh;
-    background: var(--white);
-    padding: 20px;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-    z-index: 99;
-}
-
-.mobile-menu.active {
-    right: 0;
-}
-
-.mobile-menu ul {
-    list-style: none;
-}
-
-.mobile-menu ul li {
-    margin-bottom: 15px;
-}
-
-.mobile-menu ul li a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-size: 18px;
-    display: block;
-    padding: 10px 0;
-    transition: var(--transition);
-}
-
-.mobile-menu ul li a:hover,
-.mobile-menu ul li a.active {
-    color: var(--accent-color);
-    padding-right: 10px;
-}
-
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero-bg.jpg');
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/hero-bg.jpg');
     background-size: cover;
     background-position: center;
     height: 600px;
@@ -278,9 +294,48 @@ body {
     box-shadow: 0 5px 20px rgba(0,0,0,0.15);
 }
 
-/* Student Activities */
+.specialty-icon {
+    font-size: 40px;
+    color: var(--accent-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.specialty-card h3 {
+    color: var(--primary-color);
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.specialty-card p {
+    color: var(--text-light);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.specialty-card ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.specialty-card ul li {
+    padding: 8px 25px 8px 0;
+    position: relative;
+}
+
+.specialty-card ul li::before {
+    content: "•";
+    color: var(--accent-color);
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+}
+
+/* Student Activities Section */
 .student-activities {
     padding: 80px 0;
+    background: var(--white);
 }
 
 .activities-grid {
@@ -306,10 +361,48 @@ body {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    transition: var(--transition);
+}
+
+.activity-card:hover img {
+    transform: scale(1.05);
 }
 
 .activity-content {
     padding: 20px;
+}
+
+.activity-content h3 {
+    color: var(--primary-color);
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.activity-content p {
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.activity-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.activity-features span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--light-gray);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.activity-features i {
+    color: var(--accent-color);
 }
 
 /* Footer */
@@ -356,6 +449,65 @@ body {
     border-top: 1px solid rgba(255,255,255,0.1);
 }
 
+/* Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    z-index: 999;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu ul {
+    list-style: none;
+}
+
+.mobile-menu ul li {
+    margin-bottom: 15px;
+}
+
+.mobile-menu ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px 0;
+    transition: var(--transition);
+}
+
+.mobile-menu ul li a:hover,
+.mobile-menu ul li a.active {
+    color: var(--accent-color);
+    padding-right: 10px;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: var(--primary-color);
+    transition: var(--transition);
+}
+
 /* Animations */
 @keyframes fadeInDown {
     from {
@@ -396,6 +548,12 @@ body {
     .hero p {
         font-size: 18px;
     }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+        min-width: 140px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -424,6 +582,10 @@ body {
     .footer-content {
         grid-template-columns: 1fr;
     }
+    
+    .activity-card img {
+        height: 180px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -433,6 +595,12 @@ body {
     
     .hero h1 {
         font-size: 28px;
+    }
+    
+    .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+        min-width: 120px;
     }
     
     .activity-features {
