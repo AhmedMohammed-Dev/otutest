@@ -201,11 +201,54 @@ a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--primary-color);
+    background-color: var(--white); /* تغيير لون الخلفية إلى أبيض */
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: var(--z-modal);
+    z-index: 9999;
+}
+
+.loader {
+    text-align: center;
+}
+
+.loader h2 {
+    color: var(--primary-color); /* تغيير لون النص إلى اللون الرئيسي */
+    margin-top: var(--spacing-md);
+    font-size: var(--font-size-xl);
+}
+
+.circular {
+    width: 50px;
+    height: 50px;
+    animation: rotate 2s linear infinite;
+}
+
+.path {
+    stroke: var(--accent-color); /* تغيير لون دائرة التحميل */
+    stroke-linecap: round;
+    animation: dash 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1, 150;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -35;
+    }
+    100% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -124;
+    }
 }
 
 .loading-screen.fade-out {

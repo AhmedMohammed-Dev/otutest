@@ -298,3 +298,14 @@
         display: none;
     }
 }
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none; /* إزالة الخط تحت الرابط */
+    color: inherit; /* الحفاظ على لون النص الأصلي */
+}
+
+.logo a:hover {
+    color: inherit; /* الحفاظ على لون النص عند التحويم */
+}
