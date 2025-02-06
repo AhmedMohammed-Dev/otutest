@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="theme-color" content="#003366">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    
+    <!-- SEO Meta Tags -->
     <meta name="description" content="جامعة 6 أكتوبر للتكنولوجيا - مؤسسة تعليمية رائدة في مجال التكنولوجيا والعلوم">
     <meta name="keywords" content="جامعة 6 أكتوبر, تكنولوجيا, تعليم عالي, كليات, مصر">
-    <meta name="author" content="AhmedMohammed-Dev">
+    <meta name="author" content="جامعة 6 أكتوبر للتكنولوجيا">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="جامعة 6 أكتوبر للتكنولوجيا">
+    <meta property="og:description" content="مؤسسة تعليمية رائدة في مجال التكنولوجيا والعلوم">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:url" content="https://yourwebsite.com">
+    
     <title>جامعة 6 أكتوبر للتكنولوجيا</title>
 
     <!-- Favicon -->
@@ -17,25 +25,45 @@
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="manifest" href="manifest.json">
 
-    <!-- Fonts -->
+    <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
-    <!-- Skip Link -->
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10"/>
+            </svg>
+            <h2>جامعة 6 أكتوبر للتكنولوجيا</h2>
+        </div>
+    </div>
+
+
 
     <!-- Header -->
-    <header>
+    <header class="main-header">
+        <!-- Top Bar -->
         <div class="top-bar">
             <div class="container">
                 <div class="contact-info">
-                    <a href="tel:+201142191663"><i class="fas fa-phone"></i> +201142191663</a>
-                    <a href="mailto:ahmedmohammedmohammedibrahim1@gmail.com"><i class="fas fa-envelope"></i> ahmedmohammedmohammedibrahim1@gmail.com</a>
+                    <a href="tel:+201142191663" aria-label="اتصل بنا">
+                        <i class="fas fa-phone"></i>
+                        <span>+201142191663</span>
+                    </a>
+                    <a href="mailto:contact@example.com" aria-label="راسلنا">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@example.com</span>
+                    </a>
                 </div>
                 <div class="social-links">
                     <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -46,15 +74,19 @@
             </div>
         </div>
 
+        <!-- Main Navigation -->
         <nav class="main-nav">
             <div class="container">
+                <!-- Logo -->
                 <div class="logo">
-                    <img src="images/logo.png" alt="University Logo" width="60" height="60">
+                    <img src="university.jpg" alt="شعار الجامعة">
                     <div class="logo-text">
                         <h1>جامعة 6 أكتوبر للتكنولوجيا</h1>
-                        <h2>October 6 University of Technology</h2>
+                        <span>October 6 University of Technology</span>
                     </div>
                 </div>
+        
+                <!-- Navigation Links -->
                 <ul class="nav-links">
                     <li><a href="#" class="active">الرئيسية</a></li>
                     <li><a href="#about">عن الجامعة</a></li>
@@ -63,12 +95,14 @@
                     <li><a href="#research">البحث العلمي</a></li>
                     <li><a href="#students">الطلاب</a></li>
                 </ul>
+        
+                <!-- Navigation Buttons -->
                 <div class="nav-buttons">
                     <a href="#" class="btn btn-primary pulse">
                         <i class="fas fa-user-graduate"></i>
                         <span>بوابة الطلاب</span>
                     </a>
-                    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                    <button class="menu-toggle" id="menuToggle" aria-label="القائمة">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -77,241 +111,275 @@
             </div>
         </nav>
     </header>
-
-    <!-- Main Content -->
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <h1>مرحباً بكم في جامعة 6 أكتوبر للتكنولوجيا</h1>
-                <p>نحو مستقبل تكنولوجي متميز</p>
-                <a href="#admission" class="btn btn-accent pulse">
-                    <i class="fas fa-paper-plane"></i>
-                    <span>التقديم الآن</span>
-                </a>
-            </div>
-        </section>
-
-        <!-- Colleges Section -->
-        <section id="colleges" class="colleges">
-            <div class="container">
-                <div class="section-header">
-                    <h2>كليات الجامعة</h2>
-                    <p>اكتشف برامجنا الأكاديمية المتميزة</p>
-                </div>
-
-                <!-- كلية الصناعة والطاقة -->
-                <div class="college-section">
-                    <h3 class="college-title">كلية الصناعة والطاقة</h3>
-                    <div class="specialties-grid">
-                        <div class="specialty-card">
-                            <div class="specialty-icon">
-                                <i class="fas fa-laptop-code"></i>
-                            </div>
-                            <h3>تكنولوجيا المعلومات</h3>
-                            <p>تطوير وإدارة أنظمة تكنولوجيا المعلومات</p>
-                            <ul>
-                                <li>برمجة وتطوير البرمجيات</li>
-                                <li>إدارة قواعد البيانات</li>
-                                <li>أمن المعلومات</li>
-                            </ul>
-                            <a href="#" class="btn btn-outline">
-                                <i class="fas fa-arrow-left"></i>
-                                <span>المزيد</span>
+        <!-- Main Content -->
+        <main id="main-content">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="animate-up">مرحباً بكم في جامعة 6 أكتوبر للتكنولوجيا</h1>
+                        <p class="animate-up delay-1">نحو مستقبل تكنولوجي متميز</p>
+                        <div class="hero-buttons animate-up delay-2">
+                            <a href="#admission" class="btn btn-accent pulse">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>التقديم الآن</span>
                             </a>
-                        </div>
-
-                        <div class="specialty-card">
-                            <div class="specialty-icon">
-                                <i class="fas fa-train"></i>
-                            </div>
-                            <h3>هندسة السكك الحديدية</h3>
-                            <p>تصميم وصيانة أنظمة السكك الحديدية</p>
-                            <ul>
-                                <li>تصميم خطوط السكك الحديدية</li>
-                                <li>صيانة القطارات</li>
-                                <li>أنظمة التحكم والإشارات</li>
-                            </ul>
-                            <a href="#" class="btn btn-outline">
-                                <i class="fas fa-arrow-left"></i>
-                                <span>المزيد</span>
-                            </a>
-                        </div>
-
-                        <div class="specialty-card">
-                            <div class="specialty-icon">
-                                <i class="fas fa-tshirt"></i>
-                            </div>
-                            <h3>هندسة الغزل والنسيج</h3>
-                            <p>تصميم وتطوير المنتجات النسيجية</p>
-                            <ul>
-                                <li>تكنولوجيا الغزل</li>
-                                <li>تصميم المنسوجات</li>
-                                <li>ضبط جودة المنتجات</li>
-                            </ul>
-                            <a href="#" class="btn btn-outline">
-                                <i class="fas fa-arrow-left"></i>
-                                <span>المزيد</span>
+                            <a href="#virtual-tour" class="btn btn-outline">
+                                <i class="fas fa-vr-cardboard"></i>
+                                <span>جولة افتراضية</span>
                             </a>
                         </div>
                     </div>
                 </div>
-
-                <!-- كلية العلوم الصحية -->
-                <div class="college-section">
-                    <h3 class="college-title">كلية العلوم الصحية</h3>
-                    <div class="specialties-grid">
-                        <div class="specialty-card">
-                            <div class="specialty-icon">
-                                <i class="fas fa-tooth"></i>
-                            </div>
-                            <h3>تركيب الأسنان</h3>
-                            <p>تصميم وتصنيع التركيبات السنية</p>
-                            <ul>
-                                <li>تقنيات تركيب الأسنان</li>
-                                <li>المواد السنية المتقدمة</li>
-                                <li>تصميم الابتسامة</li>
-                            </ul>
-                            <a href="#" class="btn btn-outline">
-                                <i class="fas fa-arrow-left"></i>
-                                <span>المزيد</span>
-                            </a>
+                <div class="hero-overlay"></div>
+            </section>
+    
+            <!-- Stats Section -->
+            <section class="stats">
+                <div class="container">
+                    <div class="stats-grid">
+                        <div class="stat-card" data-count="5000">
+                            <i class="fas fa-user-graduate"></i>
+                            <h3 class="counter">0</h3>
+                            <p>طالب وطالبة</p>
                         </div>
-
-                        <div class="specialty-card">
-                            <div class="specialty-icon">
-                                <i class="fas fa-pills"></i>
-                            </div>
-                            <h3>التصنيع الدوائي</h3>
-                            <p>تصنيع وتطوير المستحضرات الدوائية</p>
-                            <ul>
-                                <li>تصنيع الأدوية</li>
-                                <li>رقابة الجودة الدوائية</li>
-                                <li>تطوير المستحضرات</li>
-                            </ul>
-                            <a href="#" class="btn btn-outline">
-                                <i class="fas fa-arrow-left"></i>
-                                <span>المزيد</span>
-                            </a>
+                        <div class="stat-card" data-count="200">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <h3 class="counter">0</h3>
+                            <p>عضو هيئة تدريس</p>
+                        </div>
+                        <div class="stat-card" data-count="50">
+                            <i class="fas fa-flask"></i>
+                            <h3 class="counter">0</h3>
+                            <p>معمل متخصص</p>
+                        </div>
+                        <div class="stat-card" data-count="95">
+                            <i class="fas fa-chart-line"></i>
+                            <h3 class="counter">0</h3>
+                            <p>نسبة التوظيف</p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Student Activities Section -->
-        <section class="student-activities">
-            <div class="container">
-                <div class="section-header">
-                    <h2>النشاطات الطلابية</h2>
-                    <p>اكتشف الحياة الجامعية النابضة بالحيوية</p>
+            </section>
+    
+            <!-- Colleges Section -->
+            <section id="colleges" class="colleges">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>كليات الجامعة</h2>
+                        <p>اكتشف برامجنا الأكاديمية المتميزة</p>
+                    </div>
+    
+                    <div class="colleges-grid">
+                        <!-- كلية الصناعة والطاقة -->
+                        <div class="college-card">
+                            <div class="college-image">
+                                <img src="images/colleges/industry.jpg" alt="كلية الصناعة والطاقة" loading="lazy">
+                            </div>
+                            <div class="college-content">
+                                <h3>كلية الصناعة والطاقة</h3>
+                                <p>برامج متميزة في مجالات الصناعة والطاقة المتجددة</p>
+                                <ul class="programs-list">
+                                    <li>تكنولوجيا المعلومات</li>
+                                    <li>هندسة السكك الحديدية</li>
+                                    <li>هندسة الغزل والنسيج</li>
+                                </ul>
+                                <a href="#" class="btn btn-outline">المزيد عن الكلية</a>
+                            </div>
+                        </div>
+    
+                        <!-- كلية العلوم الصحية -->
+                        <div class="college-card">
+                            <div class="college-image">
+                                <img src="images/colleges/health.jpg" alt="كلية العلوم الصحية" loading="lazy">
+                            </div>
+                            <div class="college-content">
+                                <h3>كلية العلوم الصحية</h3>
+                                <p>تخصصات متنوعة في مجال العلوم الصحية والطبية</p>
+                                <ul class="programs-list">
+                                    <li>تركيب الأسنان</li>
+                                    <li>التصنيع الدوائي</li>
+                                    <li>العلاج الطبيعي</li>
+                                </ul>
+                                <a href="#" class="btn btn-outline">المزيد عن الكلية</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="activities-grid">
-                    <div class="activity-card">
-                        <img src="images/activities/sports.jpg" alt="النشاطات الرياضية" loading="lazy">
-                        <div class="activity-content">
-                            <h3>النشاطات الرياضية</h3>
-                            <p>فرق رياضية متعددة وبطولات دورية</p>
-                            <div class="activity-features">
-                                <span><i class="fas fa-futbol"></i> كرة القدم</span>
-                                <span><i class="fas fa-basketball-ball"></i> كرة السلة</span>
-                                <span><i class="fas fa-table-tennis"></i> تنس الطاولة</span>
-                            </div>
-                            <a href="#" class="btn btn-outline">
-                                <span>اكتشف المزيد</span>
-                                <i class="fas fa-arrow-left"></i>
-                            </a>
-                        </div>
-                    </div>
+            </section>
 
-                    <div class="activity-card">
-                        <img src="images/activities/tech.jpg" alt="النوادي التقنية" loading="lazy">
-                        <div class="activity-content">
-                            <h3>النوادي التقنية</h3>
-                            <p>مجتمعات تقنية نشطة ومشاريع إبداعية</p>
-                            <div class="activity-features">
-                                <span><i class="fas fa-robot"></i> نادي الروبوتات</span>
-                                <span><i class="fas fa-code"></i> نادي البرمجة</span>
-                                <span><i class="fas fa-vr-cardboard"></i> نادي الابتكار</span>
-                            </div>
-                            <a href="#" class="btn btn-outline">
-                                <span>اكتشف المزيد</span>
-                                <i class="fas fa-arrow-left"></i>
-                            </a>
-                        </div>
-                    </div>
 
-                    <div class="activity-card">
-                        <img src="images/activities/culture.jpg" alt="النشاطات الثقافية" loading="lazy">
-                        <div class="activity-content">
-                            <h3>النشاطات الثقافية</h3>
-                            <p>فعاليات ثقافية متنوعة ومسابقات إبداعية</p>
-                            <div class="activity-features">
-                                <span><i class="fas fa-book"></i> نادي القراءة</span>
-                                <span><i class="fas fa-theater-masks"></i> المسرح</span>
-                                <span><i class="fas fa-paint-brush"></i> الفنون</span>
-                            </div>
-                            <a href="#" class="btn btn-outline">
-                                <span>اكتشف المزيد</span>
-                                <i class="fas fa-arrow-left"></i>
-                            </a>
-                        </div>
+            <!-- Student Activities Section -->
+<section class="student-activities">
+    <div class="container">
+        <div class="section-header">
+            <h2>النشاطات الطلابية</h2>
+            <p>اكتشف الحياة الجامعية النابضة بالحيوية</p>
+        </div>
+
+        <div class="activities-grid">
+            <!-- النشاط الأول: الرياضة -->
+            <div class="activity-card">
+                <div class="activity-image">
+                    <img src="images/activities/sports.jpg" alt="النشاطات الرياضية" loading="lazy">
+                </div>
+                <div class="activity-content">
+                    <h3>النشاطات الرياضية</h3>
+                    <p>فرق رياضية متعددة وبطولات دورية</p>
+                    <div class="activity-features">
+                        <span><i class="fas fa-futbol"></i> كرة القدم</span>
+                        <span><i class="fas fa-basketball-ball"></i> كرة السلة</span>
+                        <span><i class="fas fa-table-tennis"></i> تنس الطاولة</span>
                     </div>
+                    <a href="#" class="btn btn-outline">
+                        <span>اكتشف المزيد</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
                 </div>
             </div>
-        </section>
-    </main>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-        <nav>
-            <ul>
-                <li><a href="#" class="active">الرئيسية</a></li>
-                <li><a href="#about">عن الجامعة</a></li>
-                <li><a href="#colleges">الكليات</a></li>
-                <li><a href="#admission">القبول</a></li>
-                <li><a href="#research">البحث العلمي</a></li>
-                <li><a href="#students">الطلاب</a></li>
-            </ul>
-        </nav>
-    </div>
-
-    <!-- Footer -->
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>تواصل معنا</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> العنوان: مدينة 6 أكتوبر</p>
-                    <p><i class="fas fa-phone"></i> الهاتف: 01142191663</p>
-                    <p><i class="fas fa-envelope"></i> البريد: ahmedmohammedmohammedibrahim1@gmail.com</p>
+            <!-- النشاط الثاني: النوادي التقنية -->
+            <div class="activity-card">
+                <div class="activity-image">
+                    <img src="images/activities/tech.jpg" alt="النوادي التقنية" loading="lazy">
                 </div>
-                <div class="footer-section">
-                    <h3>روابط سريعة</h3>
-                    <ul>
-                        <li><a href="#">التقويم الأكاديمي</a></li>
-                        <li><a href="#">المكتبة الإلكترونية</a></li>
-                        <li><a href="#">الخريجين</a></li>
-                        <li><a href="#">التوظيف</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>تابعنا</h3>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <div class="activity-content">
+                    <h3>النوادي التقنية</h3>
+                    <p>مجتمعات تقنية نشطة ومشاريع إبداعية</p>
+                    <div class="activity-features">
+                        <span><i class="fas fa-robot"></i> نادي الروبوتات</span>
+                        <span><i class="fas fa-code"></i> نادي البرمجة</span>
+                        <span><i class="fas fa-vr-cardboard"></i> نادي الابتكار</span>
                     </div>
+                    <a href="#" class="btn btn-outline">
+                        <span>اكتشف المزيد</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>© 2024 جميع الحقوق محفوظة - جامعة 6 أكتوبر للتكنولوجيا</p>
+
+            <!-- النشاط الثالث: النشاطات الثقافية -->
+            <div class="activity-card">
+                <div class="activity-image">
+                    <img src="images/activities/culture.jpg" alt="النشاطات الثقافية" loading="lazy">
+                </div>
+                <div class="activity-content">
+                    <h3>النشاطات الثقافية</h3>
+                    <p>فعاليات ثقافية متنوعة ومسابقات إبداعية</p>
+                    <div class="activity-features">
+                        <span><i class="fas fa-book"></i> نادي القراءة</span>
+                        <span><i class="fas fa-theater-masks"></i> المسرح</span>
+                        <span><i class="fas fa-paint-brush"></i> الفنون</span>
+                    </div>
+                    <a href="#" class="btn btn-outline">
+                        <span>اكتشف المزيد</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
             </div>
         </div>
-    </footer>
+    </div>
+</section>
+    
+            <!-- News & Events Section -->
+            <section class="news-events">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>أخبار وفعاليات</h2>
+                        <p>آخر المستجدات والأحداث في الجامعة</p>
+                    </div>
+    
+                    <div class="news-grid">
+                        <!-- News Cards -->
+                        <article class="news-card">
+                            <div class="news-image">
+                                <img src="images/news/news1.jpg" alt="صورة الخبر" loading="lazy">
+                                <div class="news-date">
+                                    <span class="day">15</span>
+                                    <span class="month">مارس</span>
+                                </div>
+                            </div>
+                            <div class="news-content">
+                                <h3>   هكتب اي حاجه لحد ما افكر هعمل ايه في الجزء ده </h3>
+                                <p>  احذفه ولا اعمل بيه حاجه مفيده يمكن اربطه مع صفحه facebook </p>
+                                <a href="#" class="read-more">اقرأ المزيد</a>
+                            </div>
+                        </article>
 
-    <!-- Scripts -->
-    <script src="js/main.js"></script>
-</body>
-</html>
+
+                        
+                        <!-- يمكن إضافة المزيد من الأخبار هنا -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">الرئيسية</a></li>
+                    <li><a href="#about">عن الجامعة</a></li>
+                    <li><a href="#colleges">الكليات</a></li>
+                    <li><a href="#admission">القبول</a></li>
+                    <li><a href="#research">البحث العلمي</a></li>
+                    <li><a href="#students">الطلاب</a></li>
+                </ul>
+            </nav>
+        </div>
+    
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>تواصل معنا</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> العنوان: مدينة 6 أكتوبر</p>
+                        <p><i class="fas fa-phone"></i> الهاتف: 01142191663</p>
+                        <p><i class="fas fa-envelope"></i> البريد: contact@example.com</p>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h3>روابط سريعة</h3>
+                        <ul>
+                            <li><a href="#">التقويم الأكاديمي</a></li>
+                            <li><a href="#">المكتبة الإلكترونية</a></li>
+                            <li><a href="#">الخريجين</a></li>
+                            <li><a href="#">التوظيف</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer-section">
+                        <h3>تابعنا</h3>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="footer-bottom">
+                    <p>© 2024 جميع الحقوق محفوظة - جامعة 6 أكتوبر للتكنولوجيا</p>
+                    <div class="developer-info">
+                        <p>تم التطوير بواسطة 
+                            <a href="https://github.com/AhmedMohammed-Dev" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                                <span>AhmedMohammed-Dev</span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+        </footer>
+    
+        <!-- Scroll to Top Button -->
+        <button id="scrollToTop" class="scroll-to-top" aria-label="العودة إلى الأعلى">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    
+        <!-- Scripts -->
+        <script src="js/utils.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+    </html>
