@@ -2,13 +2,32 @@
 <html dir="rtl" lang="ar">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#003366">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="description" content="جامعة 6 أكتوبر للتكنولوجيا - مؤسسة تعليمية رائدة في مجال التكنولوجيا والعلوم">
+    <meta name="keywords" content="جامعة 6 أكتوبر, تكنولوجيا, تعليم عالي, كليات, مصر">
+    <meta name="author" content="AhmedMohammed-Dev">
     <title>جامعة 6 أكتوبر للتكنولوجيا</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Skip Link -->
+
     <!-- Header -->
     <header>
         <div class="top-bar">
@@ -18,10 +37,10 @@
                     <a href="mailto:ahmedmohammedmohammedibrahim1@gmail.com"><i class="fas fa-envelope"></i> ahmedmohammedmohammedibrahim1@gmail.com</a>
                 </div>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
@@ -29,7 +48,7 @@
         <nav class="main-nav">
             <div class="container">
                 <div class="logo">
-                    <img src="images/logo.png" alt="University Logo">
+                    <img src="images/logo.png" alt="University Logo" width="60" height="60">
                     <div class="logo-text">
                         <h1>جامعة 6 أكتوبر للتكنولوجيا</h1>
                         <h2>October 6 University of Technology</h2>
@@ -37,18 +56,18 @@
                 </div>
                 <ul class="nav-links">
                     <li><a href="#" class="active">الرئيسية</a></li>
-                    <li><a href="#">عن الجامعة</a></li>
-                    <li><a href="#">الكليات</a></li>
-                    <li><a href="#">القبول</a></li>
-                    <li><a href="#">البحث العلمي</a></li>
-                    <li><a href="#">الطلاب</a></li>
+                    <li><a href="#about">عن الجامعة</a></li>
+                    <li><a href="#colleges">الكليات</a></li>
+                    <li><a href="#admission">القبول</a></li>
+                    <li><a href="#research">البحث العلمي</a></li>
+                    <li><a href="#students">الطلاب</a></li>
                 </ul>
                 <div class="nav-buttons">
                     <a href="#" class="btn btn-primary pulse">
                         <i class="fas fa-user-graduate"></i>
                         <span>بوابة الطلاب</span>
                     </a>
-                    <button class="menu-toggle" id="menuToggle">
+                    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -58,15 +77,14 @@
         </nav>
     </header>
 
-
     <!-- Main Content -->
-    <main>
+    <main id="main-content">
         <!-- Hero Section -->
         <section class="hero">
             <div class="container">
                 <h1>مرحباً بكم في جامعة 6 أكتوبر للتكنولوجيا</h1>
                 <p>نحو مستقبل تكنولوجي متميز</p>
-                <a href="#" class="btn btn-accent pulse">
+                <a href="#admission" class="btn btn-accent pulse">
                     <i class="fas fa-paper-plane"></i>
                     <span>التقديم الآن</span>
                 </a>
@@ -74,7 +92,7 @@
         </section>
 
         <!-- Colleges Section -->
-        <section class="colleges">
+        <section id="colleges" class="colleges">
             <div class="container">
                 <div class="section-header">
                     <h2>كليات الجامعة</h2>
@@ -180,68 +198,82 @@
             </div>
         </section>
 
-      <!-- Student Activities Section -->
-<section class="student-activities">
-    <div class="container">
-        <div class="section-header">
-            <h2>النشاطات الطلابية</h2>
-            <p>اكتشف الحياة الجامعية النابضة بالحيوية</p>
-        </div>
-        <div class="activities-grid">
-            <div class="activity-card">
-                <img src="images/activities/sports.jpg" alt="النشاطات الرياضية">
-                <div class="activity-content">
-                    <h3>النشاطات الرياضية</h3>
-                    <p>فرق رياضية متعددة وبطولات دورية</p>
-                    <div class="activity-features">
-                        <span><i class="fas fa-futbol"></i> كرة القدم</span>
-                        <span><i class="fas fa-basketball-ball"></i> كرة السلة</span>
-                        <span><i class="fas fa-table-tennis"></i> تنس الطاولة</span>
-                    </div>
-                    <a href="#" class="btn btn-outline">
-                        <span>اكتشف المزيد</span>
-                        <i class="fas fa-arrow-left"></i>
-                    </a>
+        <!-- Student Activities Section -->
+        <section class="student-activities">
+            <div class="container">
+                <div class="section-header">
+                    <h2>النشاطات الطلابية</h2>
+                    <p>اكتشف الحياة الجامعية النابضة بالحيوية</p>
                 </div>
-            </div>
+                <div class="activities-grid">
+                    <div class="activity-card">
+                        <img src="images/activities/sports.jpg" alt="النشاطات الرياضية" loading="lazy">
+                        <div class="activity-content">
+                            <h3>النشاطات الرياضية</h3>
+                            <p>فرق رياضية متعددة وبطولات دورية</p>
+                            <div class="activity-features">
+                                <span><i class="fas fa-futbol"></i> كرة القدم</span>
+                                <span><i class="fas fa-basketball-ball"></i> كرة السلة</span>
+                                <span><i class="fas fa-table-tennis"></i> تنس الطاولة</span>
+                            </div>
+                            <a href="#" class="btn btn-outline">
+                                <span>اكتشف المزيد</span>
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </div>
 
-            <div class="activity-card">
-                <img src="images/activities/tech.jpg" alt="النوادي التقنية">
-                <div class="activity-content">
-                    <h3>النوادي التقنية</h3>
-                    <p>مجتمعات تقنية نشطة ومشاريع إبداعية</p>
-                    <div class="activity-features">
-                        <span><i class="fas fa-robot"></i> نادي الروبوتات</span>
-                        <span><i class="fas fa-code"></i> نادي البرمجة</span>
-                        <span><i class="fas fa-vr-cardboard"></i> نادي الابتكار</span>
+                    <div class="activity-card">
+                        <img src="images/activities/tech.jpg" alt="النوادي التقنية" loading="lazy">
+                        <div class="activity-content">
+                            <h3>النوادي التقنية</h3>
+                            <p>مجتمعات تقنية نشطة ومشاريع إبداعية</p>
+                            <div class="activity-features">
+                                <span><i class="fas fa-robot"></i> نادي الروبوتات</span>
+                                <span><i class="fas fa-code"></i> نادي البرمجة</span>
+                                <span><i class="fas fa-vr-cardboard"></i> نادي الابتكار</span>
+                            </div>
+                            <a href="#" class="btn btn-outline">
+                                <span>اكتشف المزيد</span>
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
                     </div>
-                    <a href="#" class="btn btn-outline">
-                        <span>اكتشف المزيد</span>
-                        <i class="fas fa-arrow-left"></i>
-                    </a>
-                </div>
-            </div>
 
-            <div class="activity-card">
-                <img src="images/activities/culture.jpg" alt="النشاطات الثقافية">
-                <div class="activity-content">
-                    <h3>النشاطات الثقافية</h3>
-                    <p>فعاليات ثقافية متنوعة ومسابقات إبداعية</p>
-                    <div class="activity-features">
-                        <span><i class="fas fa-book"></i> نادي القراءة</span>
-                        <span><i class="fas fa-theater-masks"></i> المسرح</span>
-                        <span><i class="fas fa-paint-brush"></i> الفنون</span>
+                    <div class="activity-card">
+                        <img src="images/activities/culture.jpg" alt="النشاطات الثقافية" loading="lazy">
+                        <div class="activity-content">
+                            <h3>النشاطات الثقافية</h3>
+                            <p>فعاليات ثقافية متنوعة ومسابقات إبداعية</p>
+                            <div class="activity-features">
+                                <span><i class="fas fa-book"></i> نادي القراءة</span>
+                                <span><i class="fas fa-theater-masks"></i> المسرح</span>
+                                <span><i class="fas fa-paint-brush"></i> الفنون</span>
+                            </div>
+                            <a href="#" class="btn btn-outline">
+                                <span>اكتشف المزيد</span>
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
                     </div>
-                    <a href="#" class="btn btn-outline">
-                        <span>اكتشف المزيد</span>
-                        <i class="fas fa-arrow-left"></i>
-                    </a>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
     </main>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <nav>
+            <ul>
+                <li><a href="#" class="active">الرئيسية</a></li>
+                <li><a href="#about">عن الجامعة</a></li>
+                <li><a href="#colleges">الكليات</a></li>
+                <li><a href="#admission">القبول</a></li>
+                <li><a href="#research">البحث العلمي</a></li>
+                <li><a href="#students">الطلاب</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <!-- Footer -->
     <footer class="main-footer">
@@ -265,19 +297,20 @@
                 <div class="footer-section">
                     <h3>تابعنا</h3>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2024 AhmedMohammed-Dev</p>
+                <p>© 2024 جميع الحقوق محفوظة - جامعة 6 أكتوبر للتكنولوجيا</p>
             </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="js/main.js"></script>
 </body>
 </html>
