@@ -378,6 +378,7 @@ a:hover {
 
 .nav-links a:hover::after,
 .nav-links a.active::after {
+    color: var(--accent-color);
     width: 100%;
 }
 
@@ -454,6 +455,8 @@ a:hover {
 .mobile-menu a.active {
     color: var(--accent-color);
     padding-right: calc(var(--spacing-md) + 5px);
+    background-color: rgba(0, 0, 0, 0.05);
+
 }
 
 /* Scroll States */
@@ -1414,43 +1417,5 @@ a:hover {
 
     .activity-image {
         height: 180px;
-    }
-}
-/*====================
-  12. User Selection Prevention
-====================*/
-/* منع تحديد النص في الأماكن المحددة */
-.logo-text,
-.nav-links,
-.top-bar,
-.hero-content h1,
-.hero-content p,
-.section-header,
-.stats-card,
-.college-card h3,
-.activity-card h3,
-.footer-section h3,
-.btn,
-.menu-toggle {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-/* منع تحديد الأيقونات */
-i[class*="fa-"] {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-/* تحسين تجربة اللمس على الهواتف */
-@media (max-width: 768px) {
-    .nav-links a,
-    .btn,
-    .social-links a {
-        -webkit-tap-highlight-color: transparent;
     }
 }

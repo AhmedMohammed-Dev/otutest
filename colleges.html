@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#003366">
+    <meta name="description" content="اكتشف كليات جامعة 6 أكتوبر للتكنولوجيا وبرامجها الأكاديمية المتميزة">
+    
+    <title>الكليات - جامعة 6 أكتوبر للتكنولوجيا</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/colleges.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <a href="tel:+201142191663">
+                        <i class="fas fa-phone"></i>
+                        <span>+201142191663</span>
+                    </a>
+                    <a href="mailto:contact@example.com">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@example.com</span>
+                    </a>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="main-nav">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="شعار الجامعة">
+                        <div class="logo-text">
+                            <h1>جامعة 6 أكتوبر للتكنولوجيا</h1>
+                            <span>October 6 University of Technology</span>
+                        </div>
+                    </a>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">عن الجامعة</a></li>
+                    <li><a href="colleges.html" class="active">الكليات</a></li>
+                    <li><a href="admission.html">القبول</a></li>
+                    <li><a href="research.html">البحث العلمي</a></li>
+                    <li><a href="students.html">الطلاب</a></li>
+                </ul>
+
+                <div class="nav-buttons">
+                    <a href="#" class="btn btn-primary pulse">
+                        <i class="fas fa-user-graduate"></i>
+                        <span>بوابة الطلاب</span>
+                    </a>
+                    <button class="menu-toggle" id="menuToggle" aria-label="القائمة">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>الكليات</h1>
+            <nav class="breadcrumb">
+                <a href="index.html">الرئيسية</a>
+                <i class="fas fa-chevron-left"></i>
+                <span>الكليات</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="colleges-page">
+        <!-- Colleges Filter -->
+        <section class="colleges-filter">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">جميع الكليات</button>
+                    <button class="filter-btn" data-filter="industry">كلية الصناعة والطاقة</button>
+                    <button class="filter-btn" data-filter="health">كلية العلوم الصحية</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Colleges Grid -->
+        <section class="colleges-grid">
+            <div class="container">
+                <div class="grid">
+                    <!-- كلية الصناعة والطاقة -->
+                    <div class="college-card" data-category="industry">
+                        <div class="college-image">
+                            <img src="images/colleges/industry.jpg" alt="كلية الصناعة والطاقة" loading="lazy">
+                            <div class="college-overlay">
+                                <span class="college-category">الصناعة والطاقة</span>
+                            </div>
+                        </div>
+                        <div class="college-content">
+                            <h2>كلية الصناعة والطاقة</h2>
+                            <p>برامج متميزة في مجالات التكنولوجيا والصناعة</p>
+                            <div class="college-features">
+                                <div class="feature">
+                                    <i class="fas fa-clock"></i>
+                                    <span>4 سنوات</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-book"></i>
+                                    <span>3 تخصصات</span>
+                                </div>
+                            </div>
+                            <div class="departments">
+                                <h3>التخصصات المتاحة:</h3>
+                                <ul>
+                                    <li>تكنولوجيا المعلومات</li>
+                                    <li>السكك الحديدية</li>
+                                    <li>الغزل والنسيج</li>
+                                </ul>
+                            </div>
+                            <a href="#" class="btn btn-primary">
+                                <span>تفاصيل الكلية</span>
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- كلية العلوم الصحية -->
+                    <div class="college-card" data-category="health">
+                        <div class="college-image">
+                            <img src="images/colleges/health.jpg" alt="كلية العلوم الصحية" loading="lazy">
+                            <div class="college-overlay">
+                                <span class="college-category">العلوم الصحية</span>
+                            </div>
+                        </div>
+                        <div class="college-content">
+                            <h2>كلية العلوم الصحية</h2>
+                            <p>تخصصات متنوعة في مجال العلوم الصحية</p>
+                            <div class="college-features">
+                                <div class="feature">
+                                    <i class="fas fa-clock"></i>
+                                    <span>4 سنوات</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-book"></i>
+                                    <span>3 تخصصات</span>
+                                </div>
+                            </div>
+                            <div class="departments">
+                                <h3>التخصصات المتاحة:</h3>
+                                <ul>
+                                    <li>تركيب الأسنان</li>
+                                    <li>التصنيع غذائي</li>
+                                    <li>تركيبات دوائية</li>
+                                </ul>
+                            </div>
+                            <a href="#" class="btn btn-primary">
+                                <span>تفاصيل الكلية</span>
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Admission CTA -->
+        <section class="admission-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>ابدأ رحلتك الأكاديمية معنا</h2>
+                    <p>تقدم الآن للالتحاق بإحدى كلياتنا المتميزة</p>
+                    <a href="admission.html" class="btn btn-accent pulse">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>تقدم الآن</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>تواصل معنا</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> العنوان: مدينة 6 أكتوبر</p>
+                    <p><i class="fas fa-phone"></i> الهاتف: 01142191663</p>
+                    <p><i class="fas fa-envelope"></i> البريد: contact@example.com</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#">التقويم الأكاديمي</a></li>
+                        <li><a href="#">المكتبة الإلكترونية</a></li>
+                        <li><a href="#">الخريجين</a></li>
+                        <li><a href="#">التوظيف</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>تابعنا</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2024 جميع الحقوق محفوظة - جامعة 6 أكتوبر للتكنولوجيا</p>
+                <div class="developer-info">
+                    <p>تم التطوير بواسطة 
+                        <a href="https://github.com/AhmedMohammed-Dev" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                            <span>AhmedMohammed-Dev</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">عن الجامعة</a></li>
+                <li><a href="colleges.html" class="active">الكليات</a></li>
+                <li><a href="admission.html">القبول</a></li>
+                <li><a href="research.html">البحث العلمي</a></li>
+                <li><a href="students.html">الطلاب</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/colleges.js"></script>
+</body>
+</html>

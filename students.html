@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#003366">
+    <meta name="description" content="خدمات الطلاب - جامعة 6 أكتوبر للتكنولوجيا">
+    
+    <title>خدمات الطلاب - جامعة 6 أكتوبر للتكنولوجيا</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/students.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <a href="tel:+201142191663">
+                        <i class="fas fa-phone"></i>
+                        <span>+201142191663</span>
+                    </a>
+                    <a href="mailto:contact@example.com">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@example.com</span>
+                    </a>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="main-nav">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="شعار الجامعة">
+                        <div class="logo-text">
+                            <h1>جامعة 6 أكتوبر للتكنولوجيا</h1>
+                            <span>October 6 University of Technology</span>
+                        </div>
+                    </a>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">عن الجامعة</a></li>
+                    <li><a href="colleges.html">الكليات</a></li>
+                    <li><a href="admission.html">القبول</a></li>
+                    <li><a href="research.html">البحث العلمي</a></li>
+                    <li><a href="students.html" class="active">الطلاب</a></li>
+                </ul>
+
+                <div class="nav-buttons">
+                    <a href="#" class="btn btn-primary pulse">
+                        <i class="fas fa-user-graduate"></i>
+                        <span>بوابة الطلاب</span>
+                    </a>
+                    <button class="menu-toggle" id="menuToggle" aria-label="القائمة">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>خدمات الطلاب</h1>
+            <nav class="breadcrumb">
+                <a href="index.html">الرئيسية</a>
+                <i class="fas fa-chevron-left"></i>
+                <span>خدمات الطلاب</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="students-services">
+        <div class="container">
+            <div class="services-grid">
+                <!-- الجداول الدراسية -->
+                <a href="schedules.html" class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h2>الجداول الدراسية</h2>
+                    <p>جداول المحاضرات والامتحانات لجميع الكليات والتخصصات</p>
+                    <span class="btn-more">
+                        عرض الجداول
+                        <i class="fas fa-arrow-left"></i>
+                    </span>
+                </a>
+
+                <!-- الأنشطة الطلابية -->
+                <a href="activities.html" class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h2>الأنشطة الطلابية</h2>
+                    <p>الأنشطة والفعاليات الطلابية والنوادي المتاحة</p>
+                    <span class="btn-more">
+                        استكشف الأنشطة
+                        <i class="fas fa-arrow-left"></i>
+                    </span>
+                </a>
+
+                <!-- التقويم الأكاديمي -->
+                <a href="calendar.html" class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h2>التقويم الأكاديمي</h2>
+                    <p>مواعيد الدراسة والامتحانات والعطلات الرسمية</p>
+                    <span class="btn-more">
+                        عرض التقويم
+                        <i class="fas fa-arrow-left"></i>
+                    </span>
+                </a>
+
+                <!-- الإرشاد الأكاديمي -->
+                <a href="guidance.html" class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h2>الإرشاد الأكاديمي</h2>
+                    <p>خدمات الإرشاد والدعم الأكاديمي للطلاب</p>
+                    <span class="btn-more">
+                        المزيد عن الإرشاد
+                        <i class="fas fa-arrow-left"></i>
+                    </span>
+                </a>
+
+                <!-- الخدمات الطلابية -->
+                <a href="services.html" class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h2>الخدمات الطلابية</h2>
+                    <p>خدمات الدعم والمساعدة المقدمة للطلاب</p>
+                    <span class="btn-more">
+                        استكشف الخدمات
+                        <i class="fas fa-arrow-left"></i>
+                    </span>
+                </a>
+
+                <!-- المكتبة الإلكترونية -->
+                <a href="library.html" class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <h2>المكتبة الإلكترونية</h2>
+                    <p>الوصول إلى المصادر والمراجع الإلكترونية</p>
+                    <span class="btn-more">
+                        زيارة المكتبة
+                        <i class="fas fa-arrow-left"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">عن الجامعة</a></li>
+                <li><a href="colleges.html">الكليات</a></li>
+                <li><a href="admission.html">القبول</a></li>
+                <li><a href="research.html">البحث العلمي</a></li>
+                <li><a href="students.html" class="active">الطلاب</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>تواصل معنا</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> العنوان: مدينة 6 أكتوبر</p>
+                    <p><i class="fas fa-phone"></i> الهاتف: 01142191663</p>
+                    <p><i class="fas fa-envelope"></i> البريد: contact@example.com</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#">التقويم الأكاديمي</a></li>
+                        <li><a href="#">المكتبة الإلكترونية</a></li>
+                        <li><a href="#">الخريجين</a></li>
+                        <li><a href="#">التوظيف</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>تابعنا</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2024 جميع الحقوق محفوظة - جامعة 6 أكتوبر للتكنولوجيا</p>
+                <div class="developer-info">
+                    <p>تم التطوير بواسطة 
+                        <a href="https://github.com/AhmedMohammed-Dev" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                            <span>AhmedMohammed-Dev</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/students.js"></script>
+</body>
+</html>

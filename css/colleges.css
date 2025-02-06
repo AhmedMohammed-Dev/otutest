@@ -1,0 +1,265 @@
+/* Colleges Page Styles */
+
+/* Page Header */
+.page-header {
+    background: linear-gradient(rgba(0, 51, 102, 0.9), rgba(0, 51, 102, 0.9)), 
+                url('../images/colleges-header-bg.jpg') center/cover;
+    padding: var(--spacing-xl) 0;
+    color: var(--white);
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.page-header h1 {
+    font-size: var(--font-size-3xl);
+    color: var(--white);
+    margin-bottom: var(--spacing-md);
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.breadcrumb a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: var(--accent-color);
+}
+
+/* Filter Buttons */
+.colleges-filter {
+    padding: var(--spacing-lg) 0;
+    background-color: var(--white);
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 12px 25px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    background: transparent;
+    color: var(--primary-color);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* Colleges Grid */
+.colleges-grid {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--light-gray);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+/* College Card */
+.college-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-base);
+}
+
+.college-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.college-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.college-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-base);
+}
+
+.college-card:hover .college-image img {
+    transform: scale(1.1);
+}
+
+.college-overlay {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+}
+
+.college-content {
+    padding: var(--spacing-lg);
+}
+
+.college-content h2 {
+    color: var(--primary-color);
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.college-content p {
+    color: var(--text-light);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* College Features */
+.college-features {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-md) 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.feature i {
+    color: var(--accent-color);
+    font-size: var(--font-size-lg);
+}
+
+/* Departments List */
+.departments {
+    margin-bottom: var(--spacing-lg);
+}
+
+.departments h3 {
+    color: var(--primary-color);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-sm);
+}
+
+.departments ul {
+    list-style: none;
+    padding-right: var(--spacing-md);
+}
+
+.departments li {
+    position: relative;
+    padding: var(--spacing-sm) 0;
+    color: var(--text-light);
+}
+
+.departments li::before {
+    content: "•";
+    color: var(--accent-color);
+    position: absolute;
+    right: -15px;
+    font-size: 1.2em;
+}
+
+/* CTA Section */
+.admission-cta {
+    background: linear-gradient(rgba(0, 51, 102, 0.95), rgba(0, 51, 102, 0.95)),
+                url('../images/cta-bg.jpg') center/cover;
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+    color: var(--white);
+}
+
+.cta-content h2 {
+    color: var(--white);
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.cta-content p {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-lg);
+    opacity: 0.9;
+}
+
+/* Animation Classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: var(--font-size-2xl);
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .college-features {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+}
+
+@media (max-width: 576px) {
+    .college-image {
+        height: 200px;
+    }
+
+    .college-content {
+        padding: var(--spacing-md);
+    }
+
+    .cta-content h2 {
+        font-size: var(--font-size-xl);
+    }
+}
