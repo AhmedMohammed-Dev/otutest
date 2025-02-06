@@ -1416,3 +1416,41 @@ a:hover {
         height: 180px;
     }
 }
+/*====================
+  12. User Selection Prevention
+====================*/
+/* منع تحديد النص في الأماكن المحددة */
+.logo-text,
+.nav-links,
+.top-bar,
+.hero-content h1,
+.hero-content p,
+.section-header,
+.stats-card,
+.college-card h3,
+.activity-card h3,
+.footer-section h3,
+.btn,
+.menu-toggle {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* منع تحديد الأيقونات */
+i[class*="fa-"] {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* تحسين تجربة اللمس على الهواتف */
+@media (max-width: 768px) {
+    .nav-links a,
+    .btn,
+    .social-links a {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
