@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#003366">
+    <meta name="description" content="الجداول الدراسية - جامعة 6 أكتوبر للتكنولوجيا">
+    
+    <title>الجداول الدراسية - جامعة 6 أكتوبر للتكنولوجيا</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/schedules.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <a href="tel:+201142191663">
+                        <i class="fas fa-phone"></i>
+                        <span>+201142191663</span>
+                    </a>
+                    <a href="mailto:contact@example.com">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@example.com</span>
+                    </a>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+       <nav class="main-nav">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/university.jpg" alt="شعار الجامعة">
+                        <div class="logo-text">
+                            <h1>جامعة 6 أكتوبر للتكنولوجيا</h1>
+                            <span>October 6 University of Technology</span>
+                        </div>
+                    </a>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">عن الجامعة</a></li>
+                    <li><a href="colleges.html">الكليات</a></li>
+                    <li><a href="admission.html">القبول</a></li>
+                    <li><a href="research.html">البحث العلمي</a></li>
+                    <li><a href="students.html" class="active">الطلاب</a></li>
+                </ul>
+
+                <div class="nav-buttons">
+                    <a href="#" class="btn btn-primary pulse">
+                        <i class="fas fa-user-graduate"></i>
+                        <span>بوابة الطلاب</span>
+                    </a>
+                    <button class="menu-toggle" id="menuToggle" aria-label="القائمة">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>الجداول الدراسية</h1>
+            <nav class="breadcrumb">
+                <a href="index.html">الرئيسية</a>
+                <i class="fas fa-chevron-left"></i>
+                <a href="students.html">خدمات الطلاب</a>
+                <i class="fas fa-chevron-left"></i>
+                <span>الجداول الدراسية</span>
+            </nav>
+        </div>
+    </div>
+        <!-- Main Content -->
+        <main class="schedules-page">
+            <div class="container">
+                <!-- Schedule Filters -->
+                <div class="schedule-filters">
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-type="lectures">جداول المحاضرات</button>
+                        <button class="filter-btn" data-type="exams">جداول الامتحانات</button>
+                    </div>
+                </div>
+    
+                <!-- Schedules Content -->
+                <div class="schedules-content">
+                    <!-- قسم جداول المحاضرات -->
+                    <div class="schedule-section lectures-section active">
+                        <!-- كلية الصناعة والطاقة -->
+                        <div class="college-schedules">
+                            <h2>كلية الصناعة والطاقة</h2>
+                            
+                            <!-- تكنولوجيا المعلومات -->
+                            <div class="department-schedules">
+                                <h3>
+                                    <i class="fas fa-laptop-code"></i>
+                                    تكنولوجيا المعلومات
+                                </h3>
+                                <div class="schedule-files">
+                                    <a href="javascript:void(0)" onclick="openPdfModal('files/it/first-year.pdf', 'جدول الفرقة الأولى - تكنولوجيا المعلومات')" class="schedule-file">
+                                        <i class="fas fa-file-pdf"></i>
+                                        <span>الفرقة الأولى</span>
+                                    </a>
+                                    <a href="javascript:void(0)" onclick="openPdfModal('files/it/second-year.pdf', 'جدول الفرقة الثانية - تكنولوجيا المعلومات')" class="schedule-file">
+                                        <i class="fas fa-file-pdf"></i>
+                                        <span>الفرقة الثانية</span>
+                                    </a>
+                                    <a href="javascript:void(0)" onclick="openPdfModal('files/it/third-year.pdf', 'جدول الفرقة الثالثة - تكنولوجيا المعلومات')" class="schedule-file">
+                                        <i class="fas fa-file-pdf"></i>
+                                        <span>الفرقة الثالثة</span>
+                                    </a>
+                                    <a href="javascript:void(0)" onclick="openPdfModal('files/it/fourth-year.pdf', 'جدول الفرقة الرابعة - تكنولوجيا المعلومات')" class="schedule-file">
+                                        <i class="fas fa-file-pdf"></i>
+                                        <span>الفرقة الرابعة</span>
+                                    </a>
+                                </div>
+                            </div>
+    
+                            <!-- السكك الحديدية -->
+                            <div class="department-schedules">
+                                <h3>
+                                    <i class="fas fa-train"></i>
+                                    السكك الحديدية
+                                </h3>
+                                <div class="schedule-files">
+                                    <a href="javascript:void(0)" onclick="openPdfModal('files/railway/first-year.pdf', 'جدول الفرقة الأولى - السكك الحديدية')" class="schedule-file">
+                                        <i class="fas fa-file-pdf"></i>
+                                        <span>الفرقة الأولى</span>
+                                    </a>
+                                    <a href="javascript:void(0)" onclick="openPdfModal('files/railway/second-year.pdf', 'جدول الفرقة الثانية - السكك الحديدية')" class="schedule-file">
+                                        <i class="fas fa-file-pdf"></i>
+                                        <span>الفرقة الثانية</span>
+                                    </a>
+                                    <a href="javascript:void(0)" onclick="openPdfModal('files/railway/third-year.pdf', 'جدول الفرقة الثالثة - السكك الحديدية')" class="schedule-file">
+                                        <i class="fas fa-file-pdf"></i>
+                                        <span>الفرقة الثالثة</span>
+                                    </a>
+                                    <a href="javascript:void(0)" onclick="openPdfModal('files/railway/fourth-year.pdf', 'جدول الفرقة الرابعة - السكك الحديدية')" class="schedule-file">
+                                        <i class="fas fa-file-pdf"></i>
+                                        <span>الفرقة الرابعة</span>
+                                    </a>
+                                </div>
+                            </div>
+    
+                            <!-- الغزل والنسيج -->
+                            <div class="department-schedules">
+                                <h3>
+                                    <i class="fas fa-tshirt"></i>
+                                    الغزل والنسيج
+                                </h3>
+                                <div class="schedule-files">
+                                    <a href="javascript:void(0)" onclick="openPdfModal('files/textile/first-year.pdf', 'جدول الفرقة الأولى - الغزل والنسيج')" class="schedule-file">
+                                        <i class="fas fa-file-pdf"></i>
+                                        <span>الفرقة الأولى</span>
+                                    </a>
+                                    <a href="javascript:void(0)" onclick="openPdfModal('files/textile/second-year.pdf', 'جدول الفرقة الثانية - الغزل والنسيج')" class="schedule-file">
+                                        <i class="fas fa-file-pdf"></i>
+                                        <span>الفرقة الثانية</span>
+                                    </a>
+                                    <a href="javascript:void(0)" onclick="openPdfModal('files/textile/third-year.pdf', 'جدول الفرقة الثالثة - الغزل والنسيج')" class="schedule-file">
+                                        <i class="fas fa-file-pdf"></i>
+                                        <span>الفرقة الثالثة</span>
+                                    </a>
+                                    <a href="javascript:void(0)" onclick="openPdfModal('files/textile/fourth-year.pdf', 'جدول الفرقة الرابعة - الغزل والنسيج')" class="schedule-file">
+                                        <i class="fas fa-file-pdf"></i>
+                                        <span>الفرقة الرابعة</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- كلية العلوم الصحية -->
+                        <div class="college-schedules">
+                            <h2>كلية العلوم الصحية</h2>
+                            
+                            <!-- تركيب الأسنان -->
+                            <div class="department-schedules">
+                                <h3>
+                                    <i class="fas fa-tooth"></i>
+                                    تركيب الأسنان
+                                </h3>
+                                <div class="schedule-files">
+                                    <a href="javascript:void(0)" onclick="openPdfModal('files/dental/first-year.pdf', 'جدول الفرقة الأولى - تركيب الأسنان')" class="schedule-file">
+                                        <i class="fas fa-file-pdf"></i>
+                                        <span>الفرقة الأولى</span>
+                                    </a>
+                                    <a href="javascript:void(0)" onclick="openPdfModal('files/dental/second-year.pdf', 'جدول الفرقة الثانية - تركيب الأسنان')" class="schedule-file">
+                                        <i class="fas fa-file-pdf"></i>
+                                        <span>الفرقة الثانية</span>
+                                    </a>
+                                    <a href="javascript:void(0)" onclick="openPdfModal('files/dental/third-year.pdf', 'جدول الفرقة الثالثة - تركيب الأسنان')" class="schedule-file">
+                                        <i class="fas fa-file-pdf"></i>
+                                        <span>الفرقة الثالثة</span>
+                                    </a>
+                                    <a href="javascript:void(0)" onclick="openPdfModal('files/dental/fourth-year.pdf', 'جدول الفرقة الرابعة - تركيب الأسنان')" class="schedule-file">
+                                        <i class="fas fa-file-pdf"></i>
+                                        <span>الفرقة الرابعة</span>
+                                    </a>
+                                </div>
+                            </div>
+    
+                            <!-- التصنيع الغذائي -->
+                            <div class="department-schedules">
+                                <h3>
+                                    <i class="fas fa-utensils"></i>
+                                    التصنيع الغذائي
+                                </h3>
+                                <div class="schedule-files">
+                                    <a href="javascript:void(0)" onclick="openPdfModal('files/food/first-year.pdf', 'جدول الفرقة الأولى - التصنيع الغذائي')" class="schedule-file">
+                                        <i class="fas fa-file-pdf"></i>
+                                        <span>الفرقة الأولى</span>
+                                    </a>
+                                    <a href="javascript:void(0)" onclick="openPdfModal('files/food/second-year.pdf', 'جدول الفرقة الثانية - التصنيع الغذائي')" class="schedule-file">
+                                        <i class="fas fa-file-pdf"></i>
+                                        <span>الفرقة الثانية</span>
+                                    </a>
+                                    <a href="javascript:void(0)" onclick="openPdfModal('files/food/third-year.pdf', 'جدول الفرقة الثالثة - التصنيع الغذائي')" class="schedule-file">
+                                        <i class="fas fa-file-pdf"></i>
+                                        <span>الفرقة الثالثة</span>
+                                    </a>
+                                    <a href="javascript:void(0)" onclick="openPdfModal('files/food/fourth-year.pdf', 'جدول الفرقة الرابعة - التصنيع الغذائي')" class="schedule-file">
+                                        <i class="fas fa-file-pdf"></i>
+                                        <span>الفرقة الرابعة</span>
+                                    </a>
+                                </div>
+                            </div>
+    
+                            <!-- تركيبات دوائية -->
+                            <div class="department-schedules">
+                                <h3>
+                                    <i class="fas fa-pills"></i>
+                                    تركيبات دوائية
+                                </h3>
+                                <div class="schedule-files">
+                                    <a href="javascript:void(0)" onclick="openPdfModal('files/pharma/first-year.pdf', 'جدول الفرقة الأولى - تركيبات دوائية')" class="schedule-file">
+                                        <i class="fas fa-file-pdf"></i>
+                                        <span>الفرقة الأولى</span>
+                                    </a>
+                                    <a href="javascript:void(0)" onclick="openPdfModal('files/pharma/second-year.pdf', 'جدول الفرقة الثانية - تركيبات دوائية')" class="schedule-file">
+                                        <i class="fas fa-file-pdf"></i>
+                                        <span>الفرقة الثانية</span>
+                                    </a>
+                                    <a href="javascript:void(0)" onclick="openPdfModal('files/pharma/third-year.pdf', 'جدول الفرقة الثالثة - تركيبات دوائية')" class="schedule-file">
+                                        <i class="fas fa-file-pdf"></i>
+                                        <span>الفرقة الثالثة</span>
+                                    </a>
+                                    <a href="javascript:void(0)" onclick="openPdfModal('files/pharma/fourth-year.pdf', 'جدول الفرقة الرابعة - تركيبات دوائية')" class="schedule-file">
+                                        <i class="fas fa-file-pdf"></i>
+                                        <span>الفرقة الرابعة</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                    <!-- قسم جداول الامتحانات -->
+                <div class="schedule-section exams-section">
+                    <!-- كلية الصناعة والطاقة -->
+                    <div class="college-schedules">
+                        <h2>كلية الصناعة والطاقة</h2>
+                        
+                        <!-- تكنولوجيا المعلومات -->
+                        <div class="department-schedules">
+                            <h3>
+                                <i class="fas fa-laptop-code"></i>
+                                تكنولوجيا المعلومات
+                            </h3>
+                            <div class="schedule-files">
+                                <a href="javascript:void(0)" onclick="openPdfModal('files/exams/it/first-year.pdf', 'امتحانات الفرقة الأولى - تكنولوجيا المعلومات')" class="schedule-file">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>امتحانات الفرقة الأولى</span>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openPdfModal('files/exams/it/second-year.pdf', 'امتحانات الفرقة الثانية - تكنولوجيا المعلومات')" class="schedule-file">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>امتحانات الفرقة الثانية</span>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openPdfModal('files/exams/it/third-year.pdf', 'امتحانات الفرقة الثالثة - تكنولوجيا المعلومات')" class="schedule-file">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>امتحانات الفرقة الثالثة</span>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openPdfModal('files/exams/it/fourth-year.pdf', 'امتحانات الفرقة الرابعة - تكنولوجيا المعلومات')" class="schedule-file">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>امتحانات الفرقة الرابعة</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- السكك الحديدية -->
+                        <div class="department-schedules">
+                            <h3>
+                                <i class="fas fa-train"></i>
+                                السكك الحديدية
+                            </h3>
+                            <div class="schedule-files">
+                                <a href="javascript:void(0)" onclick="openPdfModal('files/exams/railway/first-year.pdf', 'امتحانات الفرقة الأولى - السكك الحديدية')" class="schedule-file">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>امتحانات الفرقة الأولى</span>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openPdfModal('files/exams/railway/second-year.pdf', 'امتحانات الفرقة الثانية - السكك الحديدية')" class="schedule-file">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>امتحانات الفرقة الثانية</span>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openPdfModal('files/exams/railway/third-year.pdf', 'امتحانات الفرقة الثالثة - السكك الحديدية')" class="schedule-file">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>امتحانات الفرقة الثالثة</span>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openPdfModal('files/exams/railway/fourth-year.pdf', 'امتحانات الفرقة الرابعة - السكك الحديدية')" class="schedule-file">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>امتحانات الفرقة الرابعة</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- الغزل والنسيج -->
+                        <div class="department-schedules">
+                            <h3>
+                                <i class="fas fa-tshirt"></i>
+                                الغزل والنسيج
+                            </h3>
+                            <div class="schedule-files">
+                                <a href="javascript:void(0)" onclick="openPdfModal('files/exams/textile/first-year.pdf', 'امتحانات الفرقة الأولى - الغزل والنسيج')" class="schedule-file">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>امتحانات الفرقة الأولى</span>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openPdfModal('files/exams/textile/second-year.pdf', 'امتحانات الفرقة الثانية - الغزل والنسيج')" class="schedule-file">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>امتحانات الفرقة الثانية</span>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openPdfModal('files/exams/textile/third-year.pdf', 'امتحانات الفرقة الثالثة - الغزل والنسيج')" class="schedule-file">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>امتحانات الفرقة الثالثة</span>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openPdfModal('files/exams/textile/fourth-year.pdf', 'امتحانات الفرقة الرابعة - الغزل والنسيج')" class="schedule-file">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>امتحانات الفرقة الرابعة</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- كلية العلوم الصحية -->
+                    <div class="college-schedules">
+                        <h2>كلية العلوم الصحية</h2>
+                        
+                        <!-- تركيب الأسنان -->
+                        <div class="department-schedules">
+                            <h3>
+                                <i class="fas fa-tooth"></i>
+                                تركيب الأسنان
+                            </h3>
+                            <div class="schedule-files">
+                                <a href="javascript:void(0)" onclick="openPdfModal('files/exams/dental/first-year.pdf', 'امتحانات الفرقة الأولى - تركيب الأسنان')" class="schedule-file">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>امتحانات الفرقة الأولى</span>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openPdfModal('files/exams/dental/second-year.pdf', 'امتحانات الفرقة الثانية - تركيب الأسنان')" class="schedule-file">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>امتحانات الفرقة الثانية</span>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openPdfModal('files/exams/dental/third-year.pdf', 'امتحانات الفرقة الثالثة - تركيب الأسنان')" class="schedule-file">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>امتحانات الفرقة الثالثة</span>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openPdfModal('files/exams/dental/fourth-year.pdf', 'امتحانات الفرقة الرابعة - تركيب الأسنان')" class="schedule-file">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>امتحانات الفرقة الرابعة</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- التصنيع الغذائي -->
+                        <div class="department-schedules">
+                            <h3>
+                                <i class="fas fa-utensils"></i>
+                                التصنيع الغذائي
+                            </h3>
+                            <div class="schedule-files">
+                                <a href="javascript:void(0)" onclick="openPdfModal('files/exams/food/first-year.pdf', 'امتحانات الفرقة الأولى - التصنيع الغذائي')" class="schedule-file">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>امتحانات الفرقة الأولى</span>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openPdfModal('files/exams/food/second-year.pdf', 'امتحانات الفرقة الثانية - التصنيع الغذائي')" class="schedule-file">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>امتحانات الفرقة الثانية</span>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openPdfModal('files/exams/food/third-year.pdf', 'امتحانات الفرقة الثالثة - التصنيع الغذائي')" class="schedule-file">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>امتحانات الفرقة الثالثة</span>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openPdfModal('files/exams/food/fourth-year.pdf', 'امتحانات الفرقة الرابعة - التصنيع الغذائي')" class="schedule-file">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>امتحانات الفرقة الرابعة</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- تركيبات دوائية -->
+                        <div class="department-schedules">
+                            <h3>
+                                <i class="fas fa-pills"></i>
+                                تركيبات دوائية
+                            </h3>
+                            <div class="schedule-files">
+                                <a href="javascript:void(0)" onclick="openPdfModal('files/exams/pharma/first-year.pdf', 'امتحانات الفرقة الأولى - تركيبات دوائية')" class="schedule-file">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>امتحانات الفرقة الأولى</span>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openPdfModal('files/exams/pharma/second-year.pdf', 'امتحانات الفرقة الثانية - تركيبات دوائية')" class="schedule-file">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>امتحانات الفرقة الثانية</span>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openPdfModal('files/exams/pharma/third-year.pdf', 'امتحانات الفرقة الثالثة - تركيبات دوائية')" class="schedule-file">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>امتحانات الفرقة الثالثة</span>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openPdfModal('files/exams/pharma/fourth-year.pdf', 'امتحانات الفرقة الرابعة - تركيبات دوائية')" class="schedule-file">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>امتحانات الفرقة الرابعة</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <!-- PDF Modal -->
+                        <div class="pdf-modal" id="pdfModal">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 id="modalTitle">عرض الجدول</h3>
+                                    <button class="close-modal" onclick="closePdfModal()">×</button>
+                                </div>
+                                <div class="modal-body">
+                                    <iframe id="pdfViewer" src="" width="100%" height="500px"></iframe>
+                                </div>
+                                <div class="modal-footer">
+                                    <a id="downloadBtn" href="" download class="btn btn-primary">
+                                        <i class="fas fa-download"></i>
+                                        تحميل الملف
+                                    </a>
+                                    <button onclick="closePdfModal()" class="btn btn-secondary">
+                                        <i class="fas fa-times"></i>
+                                        إغلاق
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            
+                <!-- Footer -->
+                <footer class="main-footer">
+                    <div class="container">
+                        <div class="footer-content">
+                            <div class="footer-section">
+                                <h3>تواصل معنا</h3>
+                                <p><i class="fas fa-map-marker-alt"></i> العنوان: مدينة 6 أكتوبر</p>
+                                <p><i class="fas fa-phone"></i> الهاتف: 01142191663</p>
+                                <p><i class="fas fa-envelope"></i> البريد: contact@example.com</p>
+                            </div>
+                            
+                            <div class="footer-section">
+                                <h3>روابط سريعة</h3>
+                                <ul>
+                                    <li><a href="#">التقويم الأكاديمي</a></li>
+                                    <li><a href="#">المكتبة الإلكترونية</a></li>
+                                    <li><a href="#">الخريجين</a></li>
+                                    <li><a href="#">التوظيف</a></li>
+                                </ul>
+                            </div>
+            
+                            <div class="footer-section">
+                                <h3>تابعنا</h3>
+                                <div class="social-links">
+                                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="footer-bottom">
+                            <p>© 2024 جميع الحقوق محفوظة - جامعة 6 أكتوبر للتكنولوجيا</p>
+                            <div class="developer-info">
+                                <p>تم التطوير بواسطة 
+                                    <a href="https://github.com/AhmedMohammed-Dev" target="_blank" rel="noopener noreferrer">
+                                        <i class="fab fa-github"></i>
+                                        <span>AhmedMohammed-Dev</span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            
+                <!-- Mobile Menu -->
+                <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">الرئيسية</a></li>
+                            <li><a href="about.html">عن الجامعة</a></li>
+                            <li><a href="colleges.html">الكليات</a></li>
+                            <li><a href="admission.html">القبول</a></li>
+                            <li><a href="research.html">البحث العلمي</a></li>
+                            <li><a href="students.html" class="active">الطلاب</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            
+                <!-- Scripts -->
+                <script src="js/main.js"></script>
+                <script src="js/schedules.js"></script>
+            </body>
+            </html>
