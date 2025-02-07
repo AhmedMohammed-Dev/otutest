@@ -112,53 +112,46 @@
     }
 
     // Scroll Functions
-    function handleScroll() {
-        if (state.isScrolling) return;
-        
-        state.isScrolling = true;
-        const currentScroll = window.pageYOffset;
+  function handleScroll() {
+    if (state.isScrolling) return;
+    
+    state.isScrolling = true;
+    const currentScroll = window.pageYOffset;
 
-        // Header Hide/Show Logic
-        if (currentScroll <= CONFIG.SCROLL_THRESHOLD) {
-            DOM.header?.classList.remove('scroll-up', 'scroll-down');
-        } else if (currentScroll > state.lastScrollTop) {
-            DOM.header?.classList.remove('scroll-up');
-            DOM.header?.classList.add('scroll-down');
-        } else {
-            DOM.header?.classList.remove('scroll-down');
-            DOM.header?.classList.add('scroll-up');
-        }
+    // ... header logic ...
 
-        // Scroll Top Button Visibility
-        if (DOM.scrollTopBtn) {
-            DOM.scrollTopBtn.classList.toggle('visible', currentScroll > CONFIG.SCROLL_THRESHOLD);
-        }
-
-        state.lastScrollTop = currentScroll;
-        state.isScrolling = false;
+    // Scroll Top Button Visibility
+    if (DOM.scrollTopBtn) {
+        DOM.scrollTopBtn.classList.toggle('visible', currentScroll > CONFIG.SCROLL_THRESHOLD);
     }
+
+    state.lastScrollTop = currentScroll;
+    state.isScrolling = false;
+}
+
 
     // Smooth Scroll Implementation
-    function handleSmoothScroll(e) {
-        const href = this.getAttribute('href');
-        if (href.startsWith('#') && href !== '#') {
-            e.preventDefault();
-            const targetElement = document.querySelector(href);
-            
-            if (targetElement) {
-                const offsetTop = targetElement.offsetTop - CONFIG.SCROLL_OFFSET;
-                
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
-
-                if (state.isMenuOpen) {
-                    toggleMenu();
-                }
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get the button
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+    
+        // Show/Hide button based on scroll position
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
             }
-        }
-    }
+        });
+    
+        // Scroll to top when button is clicked
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    });
 
     // Active Navigation
     function setActiveNavLink() {
